@@ -24,6 +24,15 @@ fetch("productos.json")
   })
   .catch(error => console.log("Error al cargar el JSON:", error)); // manejo de errores
 
+const btnEliminar = document.createElement("button");
+ const img2= document.createElement("img");
+  img2.src="https://i.pinimg.com/736x/70/4e/e2/704ee29db9689a6823fe702029c901c7.jpg"
+  img2.className= "img2"
+  btnEliminar.appendChild(img2);
+  caja.appendChild(btnEliminar);
+//btnEliminar.textContent = "Eliminar";
+btnEliminar.addEventListener("click", () => caja.remove());
+
 document.getElementById("agregar").addEventListener("click", () => {
   const url = document.getElementById("url").value;
   const nombre = document.getElementById("nombre").value;
@@ -67,6 +76,7 @@ const btnEliminar = document.createElement("button");
 //btnEliminar.textContent = "Eliminar";
 btnEliminar.addEventListener("click", () => caja.remove());
 })
+
 
 
 
